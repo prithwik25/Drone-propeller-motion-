@@ -1,7 +1,8 @@
 # Drone-propeller-motion-
 
 
-#include <Servo.h>
+
+    #include <Servo.h>
 
 // Create servo objects for each ESC (Electronic Speed Controller)
 Servo motor1;  // Front Left
@@ -180,7 +181,6 @@ void displayThrustInfo() {
   if (millis() - lastDisplay > 1000) {  // Display every second
     float throttlePercent = (float)(baseThrottle - 1000) / 1000.0 * 100.0;
     float estimatedThrust = calculateEstimatedThrust();
-    
     Serial.print("Throttle: ");
     Serial.print(throttlePercent);
     Serial.print("% | Estimated Thrust: ");
